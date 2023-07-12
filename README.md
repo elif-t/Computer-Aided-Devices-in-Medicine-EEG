@@ -20,3 +20,11 @@ Gamma activity (γ wave): are the fastest brain waves, with frequencies greater 
 The dataset supplied includes electroencephalography (EEG) responses from 20 Indian subjects. The reactions were captured while they were listening to 12 various songs ranging from Indian classical to goth rock. The song number to which each participant listened was labeled on their session. After hearing a single beep, which signaled that the music was about to start, the subjects were told to close their eyes as part of the experiment. The music was then played via speakers, and participants were asked to score their familiarity and enjoyment of the song. They were instructed to open their eyes and rate the situation on a scale of 1 to 5. This was accomplished by giving them a double beep. Using a scale of 1 to 5, the ratings were tallied, with 1 denoting the song as being the most well-known or enjoyable and 5 denoting the opposite. The events chronology in the segmented data should be ignored because it is inherited from the raw data.
 
 [dataset link](https://nemar.org/dataexplorer/detail?dataset_id=ds003774)
+
+### Data pre-processing
+The subjects' EEG data were pre-processed using a Python script written with the MNE (MNE-Python) toolkit. Several stages were required in the script to prepare the data for analysis and extract key characteristics. The following is a summary of the pre-processing steps. The required libraries, including MNE, matplotlib, numpy, pandas, and seaborn, were imported to facilitate data analysis and visualization. Participant IDs and session names were defined to identify and organize the EEG data for each participant and session. The raw EEG data for each participant and session were loaded. The data were then stored in a dictionary for easy access and further processing. Specific frequency bands of interest, such as delta, theta, alpha, beta, and gamma, were defined based on their relevance to the study.
+After the application of data pre-processing, you can see some sample EEG images below.
+Ses-05 sub-01
+![Ses-05 sub-01](https://github.com/elif-t/Computer-Aided-Devices-in-Medicine-EEG/blob/main/assets/ses-05_sub-01_eeg.png)
+Ses-12 sub-12
+![Ses-12 sub-12](https://github.com/elif-t/Computer-Aided-Devices-in-Medicine-EEG/blob/main/assets/ses-12_sub-012_eeg.png)
